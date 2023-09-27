@@ -49,7 +49,7 @@ const getBooksById = (request, h) => {
   const response = h
     .response({
       status: "fail",
-      message: "buku tidak ditemukan",
+      message: "Buku tidak ditemukan",
     })
     .code(404);
 

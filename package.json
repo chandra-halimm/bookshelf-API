@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js",
+    "start-dev": "node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@hapi/hapi": "^21.3.2",
+    "joi": "^17.10.2",
     "nanoid": "^3.3.6",
     "nodemon": "^3.0.1"
   }

@@ -82,7 +82,7 @@ const postDataBooks = (request, h) => {
   if (isSuccess) {
     const response = h.response({
       status: "success",
-      message: "buku berhasil ditambahkan",
+      message: "Buku berhasil ditambahkan",
       data: {
         booksId: id,
       },
