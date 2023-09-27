@@ -1,6 +1,7 @@
 const deleteDataBooks = require("./handler/delete");
 const postDataBooks = require("./handler/post");
 const { getAllBooks, getBooksById } = require("./handler/get");
+const editDataBooks = require("./handler/put");
 
 const routes = [
   {
@@ -22,6 +23,11 @@ const routes = [
     method: "GET",
     path: "/books/{id}",
     handler: getBooksById,
+  },
+  {
+    method: "PUT",
+    path: "/books/{id}",
+    handler: editDataBooks,
   },
 ];
 

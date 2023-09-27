@@ -13,11 +13,11 @@ const postDataBooks = (request, h) => {
     publisher,
     pageCount,
     readPage,
-    finsihed,
+    finished,
     reading,
   } = request.payload;
 
-  if (name === undefined || name === "" || name.length < 3) {
+  if (name === undefined || name.trim() === "") {
     return h
       .response({
         status: "fail",
@@ -63,7 +63,7 @@ const postDataBooks = (request, h) => {
     publisher,
     pageCount,
     readPage,
-    finsihed,
+    finished,
     reading,
     createdAt,
     updateAt,
