@@ -32,4 +32,28 @@ const getAllBooks = (request, h) => {
   return response;
 };
 
-module.exports = getAllBooks;
+const getBooksById = (request, h) => {
+  const { id } = request.params;
+
+  const book = books.find((b) => b.id === id);
+
+  if (book) {
+    return {
+      status: "success",
+      data: {
+        book,
+      },
+    };
+  }
+
+  const response = h
+    .response({
+      status: "fail",
+      message: "buku tidak ditemukan",
+    })
+    .code(404);
+
+  return response;
+};
+
+module.exports = { getAllBooks, getBooksById };
