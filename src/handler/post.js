@@ -1,8 +1,8 @@
 const books = require("../books");
 const { nanoid } = require("nanoid");
 const postDataBooks = (request, h) => {
-  const createdAt = new Date().toISOString;
-  const updateAt = createdAt;
+  const insertedAt = new Date().toISOString();
+  const updatedAt = insertedAt;
   const id = nanoid(16);
 
   const {
@@ -31,7 +31,7 @@ const postDataBooks = (request, h) => {
       .response({
         status: "fail",
         message:
-          "Gagal menambahkan buku. readPage tidak boleh lebih besar dari pagecount",
+          "Gagal menambahkan buku. readPage tidak boleh lebih besar dari pageCount",
       })
       .code(400);
   }
@@ -65,8 +65,8 @@ const postDataBooks = (request, h) => {
     readPage,
     finished,
     reading,
-    createdAt,
-    updateAt,
+    insertedAt,
+    updatedAt,
   };
 
   if (pageCount === readPage) {
@@ -84,7 +84,7 @@ const postDataBooks = (request, h) => {
       status: "success",
       message: "Buku berhasil ditambahkan",
       data: {
-        booksId: id,
+        bookId: id,
       },
     });
     response.code(201);

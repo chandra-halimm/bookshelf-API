@@ -22,7 +22,7 @@ const editDataBooks = (request, h) => {
     return h
       .response({
         status: "fail",
-        message: "Gagal mengubah buku. Mohon isi nama buku",
+        message: "Gagal memperbarui buku. Mohon isi nama buku",
       })
       .code(400);
   }
@@ -32,7 +32,7 @@ const editDataBooks = (request, h) => {
       .response({
         status: "fail",
         message:
-          "Gagal mengubah buku. readPage tidak boleh lebih besar dari pageCount",
+          "Gagal memperbarui buku. readPage tidak boleh lebih besar dari pageCount",
       })
       .code(400);
   }
@@ -56,7 +56,7 @@ const editDataBooks = (request, h) => {
 
     const response = h.response({
       status: "success",
-      message: "buku berhasil diperbarui",
+      message: "Buku berhasil diperbarui",
     });
     response.code(200);
     return response;

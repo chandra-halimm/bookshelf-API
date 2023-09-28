@@ -9,14 +9,14 @@ const deleteDataBooks = (request, h) => {
     books.splice(index, 1);
     const response = h.response({
       status: "success",
-      message: "buku berhasil dihapus",
+      message: "Buku berhasil dihapus",
     });
     response.code(200);
     return response;
   } else {
     const response = h.response({
       status: "fail",
-      message: "Buku tidak ditemukan",
+      message: "Buku gagal dihapus. Id tidak ditemukan",
     });
     response.code(404);
     return response;
